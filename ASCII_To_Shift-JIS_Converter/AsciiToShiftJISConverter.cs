@@ -4,8 +4,8 @@ namespace ASCII_To_Shift_JIS_Converter;
 
 internal class ConverterOutput
 {
-    internal string ShiftJISString { get; set; }
-    internal byte[] ShiftJISBytes { get; set; }
+    internal string ShiftJISString { get; set; } = "";
+    internal byte[] ShiftJISBytes { get; set; } = Array.Empty<byte>();
 }
 
 internal static class AsciiToShiftJISConverter
