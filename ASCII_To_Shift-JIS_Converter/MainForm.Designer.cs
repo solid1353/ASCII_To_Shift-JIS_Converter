@@ -39,11 +39,12 @@
             this.copyHexRadiobutton = new System.Windows.Forms.RadioButton();
             this.shiftJISStringRTELabel = new System.Windows.Forms.Label();
             this.shiftJISHexRTELabel = new System.Windows.Forms.Label();
+            this.ignoreTagsChecbox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // convertButton
             // 
-            this.convertButton.Location = new System.Drawing.Point(187, 484);
+            this.convertButton.Location = new System.Drawing.Point(229, 424);
             this.convertButton.Name = "convertButton";
             this.convertButton.Size = new System.Drawing.Size(94, 29);
             this.convertButton.TabIndex = 1;
@@ -54,7 +55,7 @@
             // asciiLabel
             // 
             this.asciiLabel.AutoSize = true;
-            this.asciiLabel.Location = new System.Drawing.Point(30, 52);
+            this.asciiLabel.Location = new System.Drawing.Point(27, 37);
             this.asciiLabel.Name = "asciiLabel";
             this.asciiLabel.Size = new System.Drawing.Size(147, 20);
             this.asciiLabel.TabIndex = 4;
@@ -63,7 +64,7 @@
             // shiftJISLabel
             // 
             this.shiftJISLabel.AutoSize = true;
-            this.shiftJISLabel.Location = new System.Drawing.Point(595, 52);
+            this.shiftJISLabel.Location = new System.Drawing.Point(592, 37);
             this.shiftJISLabel.Name = "shiftJISLabel";
             this.shiftJISLabel.Size = new System.Drawing.Size(105, 20);
             this.shiftJISLabel.TabIndex = 5;
@@ -71,7 +72,7 @@
             // 
             // asciiRTE
             // 
-            this.asciiRTE.Location = new System.Drawing.Point(30, 144);
+            this.asciiRTE.Location = new System.Drawing.Point(27, 86);
             this.asciiRTE.Name = "asciiRTE";
             this.asciiRTE.Size = new System.Drawing.Size(485, 313);
             this.asciiRTE.TabIndex = 6;
@@ -79,7 +80,7 @@
             // 
             // shiftJISHexRTE
             // 
-            this.shiftJISHexRTE.Location = new System.Drawing.Point(595, 310);
+            this.shiftJISHexRTE.Location = new System.Drawing.Point(591, 252);
             this.shiftJISHexRTE.Name = "shiftJISHexRTE";
             this.shiftJISHexRTE.ReadOnly = true;
             this.shiftJISHexRTE.Size = new System.Drawing.Size(366, 147);
@@ -88,7 +89,7 @@
             // 
             // shiftJISStringRTE
             // 
-            this.shiftJISStringRTE.Location = new System.Drawing.Point(595, 144);
+            this.shiftJISStringRTE.Location = new System.Drawing.Point(591, 86);
             this.shiftJISStringRTE.Name = "shiftJISStringRTE";
             this.shiftJISStringRTE.ReadOnly = true;
             this.shiftJISStringRTE.Size = new System.Drawing.Size(366, 140);
@@ -100,17 +101,18 @@
             this.clipboardCheckBox.AutoSize = true;
             this.clipboardCheckBox.Checked = true;
             this.clipboardCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.clipboardCheckBox.Location = new System.Drawing.Point(30, 489);
+            this.clipboardCheckBox.Location = new System.Drawing.Point(27, 454);
             this.clipboardCheckBox.Name = "clipboardCheckBox";
             this.clipboardCheckBox.Size = new System.Drawing.Size(151, 24);
             this.clipboardCheckBox.TabIndex = 9;
             this.clipboardCheckBox.Text = "Copy to clipboard";
             this.clipboardCheckBox.UseVisualStyleBackColor = true;
+            this.clipboardCheckBox.CheckedChanged += new System.EventHandler(this.clipboardCheckBox_CheckedChanged);
             // 
             // copyStringRadiobutton
             // 
             this.copyStringRadiobutton.AutoSize = true;
-            this.copyStringRadiobutton.Location = new System.Drawing.Point(30, 549);
+            this.copyStringRadiobutton.Location = new System.Drawing.Point(51, 514);
             this.copyStringRadiobutton.Name = "copyStringRadiobutton";
             this.copyStringRadiobutton.Size = new System.Drawing.Size(105, 24);
             this.copyStringRadiobutton.TabIndex = 10;
@@ -121,7 +123,7 @@
             // 
             this.copyHexRadiobutton.AutoSize = true;
             this.copyHexRadiobutton.Checked = true;
-            this.copyHexRadiobutton.Location = new System.Drawing.Point(30, 519);
+            this.copyHexRadiobutton.Location = new System.Drawing.Point(51, 484);
             this.copyHexRadiobutton.Name = "copyHexRadiobutton";
             this.copyHexRadiobutton.Size = new System.Drawing.Size(91, 24);
             this.copyHexRadiobutton.TabIndex = 11;
@@ -132,7 +134,7 @@
             // shiftJISStringRTELabel
             // 
             this.shiftJISStringRTELabel.AutoSize = true;
-            this.shiftJISStringRTELabel.Location = new System.Drawing.Point(596, 121);
+            this.shiftJISStringRTELabel.Location = new System.Drawing.Point(592, 63);
             this.shiftJISStringRTELabel.Name = "shiftJISStringRTELabel";
             this.shiftJISStringRTELabel.Size = new System.Drawing.Size(39, 20);
             this.shiftJISStringRTELabel.TabIndex = 12;
@@ -141,17 +143,30 @@
             // shiftJISHexRTELabel
             // 
             this.shiftJISHexRTELabel.AutoSize = true;
-            this.shiftJISHexRTELabel.Location = new System.Drawing.Point(595, 287);
+            this.shiftJISHexRTELabel.Location = new System.Drawing.Point(591, 229);
             this.shiftJISHexRTELabel.Name = "shiftJISHexRTELabel";
             this.shiftJISHexRTELabel.Size = new System.Drawing.Size(38, 20);
             this.shiftJISHexRTELabel.TabIndex = 13;
             this.shiftJISHexRTELabel.Text = "Hex:";
             // 
+            // ignoreTagsChecbox
+            // 
+            this.ignoreTagsChecbox.AutoSize = true;
+            this.ignoreTagsChecbox.Checked = true;
+            this.ignoreTagsChecbox.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ignoreTagsChecbox.Location = new System.Drawing.Point(27, 424);
+            this.ignoreTagsChecbox.Name = "ignoreTagsChecbox";
+            this.ignoreTagsChecbox.Size = new System.Drawing.Size(106, 24);
+            this.ignoreTagsChecbox.TabIndex = 14;
+            this.ignoreTagsChecbox.Text = "Ignore tags";
+            this.ignoreTagsChecbox.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1013, 624);
+            this.ClientSize = new System.Drawing.Size(995, 563);
+            this.Controls.Add(this.ignoreTagsChecbox);
             this.Controls.Add(this.shiftJISHexRTELabel);
             this.Controls.Add(this.shiftJISStringRTELabel);
             this.Controls.Add(this.copyHexRadiobutton);
@@ -183,5 +198,6 @@
         private RadioButton copyHexRadiobutton;
         private Label shiftJISStringRTELabel;
         private Label shiftJISHexRTELabel;
+        private CheckBox ignoreTagsChecbox;
     }
 }
