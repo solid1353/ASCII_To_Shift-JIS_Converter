@@ -19,8 +19,11 @@ namespace ASCII_To_Shift_JIS_Converter
             var copyToClipboard = clipboardCheckBox.Checked;
             var copyHex = copyHexRadiobutton.Checked;
             var asciiValue = asciiRTE.Text;
+            var ignoreTags = ignoreTagsChecbox.Checked;
 
-            var convertResult = AsciiToShiftJISConverter.Convert(asciiValue);
+            var convertResult = ignoreTags
+                ? AsciiToShiftJISConverter.ConvertExcludingTags(asciiValue)
+                : AsciiToShiftJISConverter.Convert(asciiValue);
             var shiftJISString = convertResult.ShiftJISString;
             var hexString = Convert.ToHexString(convertResult.ShiftJISBytes);
 
