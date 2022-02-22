@@ -9,15 +9,22 @@ namespace ASCII_To_Shift_JIS_Converter
 
         private void convertButton_Click(object sender, EventArgs e)
         {
-            // ToDo:
             var copyToClipboard = clipboardCheckBox.Checked;
             var copyHex = copyHexRadiobutton.Checked;
             var asciiValue = asciiRTE.Text;
 
             var convertResult = AsciiToShiftJISConverter.Convert(asciiValue);
+            var shiftJISString = convertResult.ShiftJISString;
+            var hexString = Convert.ToHexString(convertResult.ShiftJISBytes);
 
-            shiftJISHexRTE.Text = Convert.ToHexString(convertResult.ShiftJISBytes);
-            shiftJISStringRTE.Text = convertResult.ShiftJISString;
+            shiftJISHexRTE.Text = hexString;
+            shiftJISStringRTE.Text = shiftJISString;
+
+            if (copyToClipboard)
+            {
+                var clipboardText = copyHex ? hexString : shiftJISString;
+                Clipboard.SetText(clipboardText);
+            }
         }
     }
 }

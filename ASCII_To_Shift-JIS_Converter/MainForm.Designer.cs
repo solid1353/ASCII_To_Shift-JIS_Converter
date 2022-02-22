@@ -43,7 +43,7 @@
             // 
             // convertButton
             // 
-            this.convertButton.Location = new System.Drawing.Point(227, 486);
+            this.convertButton.Location = new System.Drawing.Point(187, 484);
             this.convertButton.Name = "convertButton";
             this.convertButton.Size = new System.Drawing.Size(94, 29);
             this.convertButton.TabIndex = 1;
@@ -102,9 +102,9 @@
             this.clipboardCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.clipboardCheckBox.Location = new System.Drawing.Point(30, 489);
             this.clipboardCheckBox.Name = "clipboardCheckBox";
-            this.clipboardCheckBox.Size = new System.Drawing.Size(191, 24);
+            this.clipboardCheckBox.Size = new System.Drawing.Size(151, 24);
             this.clipboardCheckBox.TabIndex = 9;
-            this.clipboardCheckBox.Text = "Copy to clipboard (WIP)";
+            this.clipboardCheckBox.Text = "Copy to clipboard";
             this.clipboardCheckBox.UseVisualStyleBackColor = true;
             // 
             // copyStringRadiobutton
