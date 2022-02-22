@@ -1,6 +1,6 @@
 ﻿namespace ASCII_To_Shift_JIS_Converter
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -31,12 +31,14 @@
             this.convertButton = new System.Windows.Forms.Button();
             this.asciiLabel = new System.Windows.Forms.Label();
             this.shiftJISLabel = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
-            this.richTextBox3 = new System.Windows.Forms.RichTextBox();
+            this.asciiRTE = new System.Windows.Forms.RichTextBox();
+            this.shiftJISHexRTE = new System.Windows.Forms.RichTextBox();
+            this.shiftJISStringRTE = new System.Windows.Forms.RichTextBox();
             this.clipboardCheckBox = new System.Windows.Forms.CheckBox();
             this.copyStringRadiobutton = new System.Windows.Forms.RadioButton();
             this.copyHexRadiobutton = new System.Windows.Forms.RadioButton();
+            this.shiftJISStringRTELabel = new System.Windows.Forms.Label();
+            this.shiftJISHexRTELabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // convertButton
@@ -47,6 +49,7 @@
             this.convertButton.TabIndex = 1;
             this.convertButton.Text = "Convert";
             this.convertButton.UseVisualStyleBackColor = true;
+            this.convertButton.Click += new System.EventHandler(this.convertButton_Click);
             // 
             // asciiLabel
             // 
@@ -66,29 +69,29 @@
             this.shiftJISLabel.TabIndex = 5;
             this.shiftJISLabel.Text = "Shift-JIS result:";
             // 
-            // richTextBox1
+            // asciiRTE
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(30, 144);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(485, 313);
-            this.richTextBox1.TabIndex = 6;
-            this.richTextBox1.Text = "";
+            this.asciiRTE.Location = new System.Drawing.Point(30, 144);
+            this.asciiRTE.Name = "asciiRTE";
+            this.asciiRTE.Size = new System.Drawing.Size(485, 313);
+            this.asciiRTE.TabIndex = 6;
+            this.asciiRTE.Text = "";
             // 
-            // richTextBox2
+            // shiftJISHexRTE
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(595, 338);
-            this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(344, 119);
-            this.richTextBox2.TabIndex = 7;
-            this.richTextBox2.Text = "";
+            this.shiftJISHexRTE.Location = new System.Drawing.Point(595, 310);
+            this.shiftJISHexRTE.Name = "shiftJISHexRTE";
+            this.shiftJISHexRTE.Size = new System.Drawing.Size(366, 147);
+            this.shiftJISHexRTE.TabIndex = 7;
+            this.shiftJISHexRTE.Text = "";
             // 
-            // richTextBox3
+            // shiftJISStringRTE
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(595, 144);
-            this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(344, 119);
-            this.richTextBox3.TabIndex = 8;
-            this.richTextBox3.Text = "";
+            this.shiftJISStringRTE.Location = new System.Drawing.Point(595, 144);
+            this.shiftJISStringRTE.Name = "shiftJISStringRTE";
+            this.shiftJISStringRTE.Size = new System.Drawing.Size(366, 140);
+            this.shiftJISStringRTE.TabIndex = 8;
+            this.shiftJISStringRTE.Text = "";
             // 
             // clipboardCheckBox
             // 
@@ -124,22 +127,42 @@
             this.copyHexRadiobutton.Text = "Copy hex";
             this.copyHexRadiobutton.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // shiftJISStringRTELabel
+            // 
+            this.shiftJISStringRTELabel.AutoSize = true;
+            this.shiftJISStringRTELabel.Location = new System.Drawing.Point(596, 121);
+            this.shiftJISStringRTELabel.Name = "shiftJISStringRTELabel";
+            this.shiftJISStringRTELabel.Size = new System.Drawing.Size(39, 20);
+            this.shiftJISStringRTELabel.TabIndex = 12;
+            this.shiftJISStringRTELabel.Text = "Text:";
+            // 
+            // shiftJISHexRTELabel
+            // 
+            this.shiftJISHexRTELabel.AutoSize = true;
+            this.shiftJISHexRTELabel.Location = new System.Drawing.Point(595, 287);
+            this.shiftJISHexRTELabel.Name = "shiftJISHexRTELabel";
+            this.shiftJISHexRTELabel.Size = new System.Drawing.Size(38, 20);
+            this.shiftJISHexRTELabel.TabIndex = 13;
+            this.shiftJISHexRTELabel.Text = "Hex:";
+            // 
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1013, 624);
+            this.Controls.Add(this.shiftJISHexRTELabel);
+            this.Controls.Add(this.shiftJISStringRTELabel);
             this.Controls.Add(this.copyHexRadiobutton);
             this.Controls.Add(this.copyStringRadiobutton);
             this.Controls.Add(this.clipboardCheckBox);
-            this.Controls.Add(this.richTextBox3);
-            this.Controls.Add(this.richTextBox2);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.shiftJISStringRTE);
+            this.Controls.Add(this.shiftJISHexRTE);
+            this.Controls.Add(this.asciiRTE);
             this.Controls.Add(this.shiftJISLabel);
             this.Controls.Add(this.asciiLabel);
             this.Controls.Add(this.convertButton);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainForm";
+            this.Text = "ASCII To Shift-JIS Converter";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -150,11 +173,13 @@
         private Button convertButton;
         private Label asciiLabel;
         private Label shiftJISLabel;
-        private RichTextBox richTextBox1;
-        private RichTextBox richTextBox2;
-        private RichTextBox richTextBox3;
+        private RichTextBox asciiRTE;
+        private RichTextBox shiftJISHexRTE;
+        private RichTextBox shiftJISStringRTE;
         private CheckBox clipboardCheckBox;
         private RadioButton copyStringRadiobutton;
         private RadioButton copyHexRadiobutton;
+        private Label shiftJISStringRTELabel;
+        private Label shiftJISHexRTELabel;
     }
 }
