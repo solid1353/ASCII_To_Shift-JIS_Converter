@@ -16,7 +16,7 @@ namespace ASCII_To_Shift_JIS_Converter
 
             var convertResult = AsciiToShiftJISConverter.Convert(asciiValue);
 
-            shiftJISHexRTE.Text = convertResult.ShiftJISBytes.Aggregate("", (prevValue, b) => prevValue += $" {b}");
+            shiftJISHexRTE.Text = Convert.ToHexString(convertResult.ShiftJISBytes);
             shiftJISStringRTE.Text = convertResult.ShiftJISString;
         }
     }

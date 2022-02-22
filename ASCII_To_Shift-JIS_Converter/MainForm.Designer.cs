@@ -43,7 +43,7 @@
             // 
             // convertButton
             // 
-            this.convertButton.Location = new System.Drawing.Point(214, 486);
+            this.convertButton.Location = new System.Drawing.Point(227, 486);
             this.convertButton.Name = "convertButton";
             this.convertButton.Size = new System.Drawing.Size(94, 29);
             this.convertButton.TabIndex = 1;
@@ -81,6 +81,7 @@
             // 
             this.shiftJISHexRTE.Location = new System.Drawing.Point(595, 310);
             this.shiftJISHexRTE.Name = "shiftJISHexRTE";
+            this.shiftJISHexRTE.ReadOnly = true;
             this.shiftJISHexRTE.Size = new System.Drawing.Size(366, 147);
             this.shiftJISHexRTE.TabIndex = 7;
             this.shiftJISHexRTE.Text = "";
@@ -89,6 +90,7 @@
             // 
             this.shiftJISStringRTE.Location = new System.Drawing.Point(595, 144);
             this.shiftJISStringRTE.Name = "shiftJISStringRTE";
+            this.shiftJISStringRTE.ReadOnly = true;
             this.shiftJISStringRTE.Size = new System.Drawing.Size(366, 140);
             this.shiftJISStringRTE.TabIndex = 8;
             this.shiftJISStringRTE.Text = "";
@@ -100,9 +102,9 @@
             this.clipboardCheckBox.CheckState = System.Windows.Forms.CheckState.Checked;
             this.clipboardCheckBox.Location = new System.Drawing.Point(30, 489);
             this.clipboardCheckBox.Name = "clipboardCheckBox";
-            this.clipboardCheckBox.Size = new System.Drawing.Size(151, 24);
+            this.clipboardCheckBox.Size = new System.Drawing.Size(191, 24);
             this.clipboardCheckBox.TabIndex = 9;
-            this.clipboardCheckBox.Text = "Copy to clipboard";
+            this.clipboardCheckBox.Text = "Copy to clipboard (WIP)";
             this.clipboardCheckBox.UseVisualStyleBackColor = true;
             // 
             // copyStringRadiobutton
